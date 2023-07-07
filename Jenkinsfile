@@ -12,7 +12,7 @@ pipeline {
                 checkout scm
                 
                 // Install Node.js dependencies
-                //sh 'npm install -dd'
+                sh 'npm run start'
                 
                 // Build your Node.js project
                 //sh 'npm run build'
