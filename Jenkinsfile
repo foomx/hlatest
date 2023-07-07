@@ -23,9 +23,11 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 // Execute SonarQube scanner
-                def scannerHome = tool 'sonarqube';
-                withSonarQubeEnv('jenkinsonarkey') {
-                    sh "${scannerHome}/sonar-scanner -Dsonar.java.binaries=src/main/java -Dsonar.projectKey=test"
+                script{
+                    def scannerHome = tool 'sonarqube';
+                    withSonarQubeEnv('jenkinsonarkey') {
+                        sh "${scannerHome}/sonar-scanner -Dsonar.java.binaries=src/main/java -Dsonar.projectKey=test"
+                    }
                 }
             }
         }
