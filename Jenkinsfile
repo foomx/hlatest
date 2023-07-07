@@ -43,7 +43,7 @@ pipeline {
                         // Build and tag Docker image
                        // sh 'docker build -t my-app .'
                         app = docker.build("test:latest")
-                        app.push("test:latest"}
+                        app.push("test:latest")
                         // Push Docker image to Nexus repository
                         //sh 'docker push my-app'
                     }
