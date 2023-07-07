@@ -24,7 +24,7 @@ pipeline {
             steps {
                 // Execute SonarQube scanner
                 script{
-                    def scannerHome = tool 'sonarqube';
+                    def scannerHome = tool 'sonarqubescanner';
                     withSonarQubeEnv('jenkinsonarkey') {
                         sh "${scannerHome}/sonar-scanner -Dsonar.java.binaries=src/main/java -Dsonar.projectKey=test"
                     }
