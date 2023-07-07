@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        kubernetes {
+            inheritFrom 'nodejs'
+        }
+    }
     
     stages {
         stage('Build') {
