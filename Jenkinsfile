@@ -19,12 +19,6 @@ pipeline {
             }
         }
         
-        stage('Test') {
-            steps {
-                // Run tests (e.g., using Jest)
-                //sh 'npm test'
-            }
-        }
         
         stage('SonarQube Analysis') {
             steps {
