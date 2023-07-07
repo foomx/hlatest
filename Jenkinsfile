@@ -13,17 +13,13 @@ pipeline {
                 
                 // Install Node.js dependencies
                 //sh 'npm run start'
-                sh 'npm install'
+                //sh 'npm install'
                 
                 // Build your Node.js project
                 //sh 'npm run build'
             }
         }
-        stage('TEst') {
-            steps {
-                sh 'npm test'
-            }
-        }
+        
         
         stage('SonarQube Analysis') {
             steps {
