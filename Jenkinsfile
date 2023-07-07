@@ -19,7 +19,11 @@ pipeline {
                 //sh 'npm run build'
             }
         }
-        
+        stage('TEst') {
+            steps {
+                sh 'npm test'
+            }
+        }
         
         stage('SonarQube Analysis') {
             steps {
