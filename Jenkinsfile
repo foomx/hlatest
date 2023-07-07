@@ -42,7 +42,7 @@ pipeline {
                     docker.withRegistry('https://10.151.38.166:8081/repository/docker-group/', 'jenkinsnexus') {
                         // Build and tag Docker image
                        // sh 'docker build -t my-app .'
-                        app = doccker.build("test:latest")
+                        app = docker.build("test:latest")
                         app.push("test:latest"}
                         // Push Docker image to Nexus repository
                         //sh 'docker push my-app'
