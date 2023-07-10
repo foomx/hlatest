@@ -34,6 +34,7 @@ pipeline {
         }
         */
         stage('Publish Docker Image') {
+            tools {dockerTool  "docker" }
             steps {
                 // Login to Nexus Docker repository
                 script {
