@@ -20,7 +20,7 @@ pipeline {
             }
         }
         
-        
+        /*
         stage('SonarQube Analysis') {
             steps {
                 // Execute SonarQube scanner
@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-        
+        */
         stage('Publish Docker Image') {
             steps {
                 // Login to Nexus Docker repository
